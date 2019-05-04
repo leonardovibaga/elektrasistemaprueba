@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Elektra</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../img/icons/elektra.ico">
+
+        <!--BOOTSTRAP-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!--CSS-->
+        <style type="text/css">
+            body {
+                background-color: #E6E6E6;
+            }
+            a {
+                color: #fff;
+            }
+            .contenedor-menu {
+                width: 100%;
+                height: auto;
+                display: inline;
+                position: absolute;
+            }
+            .contenedor-menu .menu {
+                width: 100%;
+
+            }
+            .contenedor-menu ul {
+                list-style: none;
+            }
+            .contenedor-menu .menu li{
+                display: block;
+                color: #E6E6E6;
+                background: #122b40;
+                padding: 15px;
+            }
+            .contenedor-menu .menu li:hover {
+                background:   #1b6d85;
+            }
+            .contenedor-menu .menu li a {
+                text-decoration: none;
+            }
+            .employee {
+                width: 100px;
+                height: 100px;
+                border-radius: 10px
+            }
+            #color {
+                background-color: #D8D8D8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-3">                        
+                        <div class="contenedor-menu">
+                            <ul class="menu">
+                                <li><a href="elektra.html">INICIO</a></li>
+                                <li><a href="employees.html">EMPLEADOS</a></li>
+                                <li><a href="customers.html">CLIENTES</a></li>
+                                <li><a href="suppliers.html">PROVEEDORES</a></li>
+                                <li><a href="tickets.html">TICKETS</a></li>
+                                <li><a href="accounts-receivable.html">CUENTAS POR COBRAR</a></li>
+                                <li><a href="accounts-payables.html">CUENTAS POR PAGAR</a></li>
+                                <li><a href="rooms.html">SALA DE JUNTAS</a></li>
+                                <li><a href="cars-for-sale.html">VENTA DE AUTOS</a></li>
+                                <li><a href="branch-offices.html">SUCURSALES</a></li>
+                                <li><a href="purchases.html">COMPRAS</a></li>
+                                <li><a href="disabilities.html">INCAPACIDADES</a></li>
+                                <li><a href="welcome.html">SALIR</a></li>
+                            </ul>
+                        </div>
+                    </div><br><br><br>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="color"><b>Leonardo Vicente Baños Galindo</b></div>           
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="../img/EMPLOYEE.jpeg" class="employee">                 
+                                            </td>
+                                            <td><br><br><i>Ingeniero en sistemas computacionales.</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Empresa:</td>
+                                            <td><i>Elektra S.A. de C.V.</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Puesto:</td>
+                                            <td><i>Programador java</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Área:</td>
+                                            <td><i>Desarrollo</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fecha de ingreso:</td>
+                                            <td><i>28/04/2019</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td><i>ing.leovibaga16@gmail.com</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Extensión:</td>
+                                            <td><i>115</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Celular:</td>
+                                            <td><i>833-395-65-60</i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--JAVASCRIPT-->
+        <script type="text/javascript"></script>
+        <!--JQUERY-->
+        <script src="../js/jquery-3.4.0.min.js" type="text/javascript">
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.menu li:has(ul)').click(function (e) {
+                    e.preventDefault();
+
+                    if ($(this).hasClass('active')) {
+
+                    } else {
+                        $('.menu li ul').slideUp();
+                        $('.menu li').removeClass('active');
+                        $(this).addClass('active');
+                        $(this).children('ul').slideDown();
+                    }
+                });
+            });
+        </script>
+
+    </body>
+</html>
